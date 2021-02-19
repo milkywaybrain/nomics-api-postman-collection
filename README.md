@@ -21,7 +21,7 @@ Copyright (c) 2021 Pavan Shetty. Licensed under the MIT License.
 1. Import the collection into your postman client.
 2. Add following variables into client environments :
    
-   key : your_nomics_api_key
+   key : your_nomics_api_key  
    base_url : https://api.nomics.com/v1
 
 ## Collection usage
