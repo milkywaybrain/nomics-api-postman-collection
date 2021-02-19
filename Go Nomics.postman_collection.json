@@ -1,0 +1,1376 @@
+{
+	"info": {
+		"_postman_id": "37f36d81-e8a5-441c-9171-b2cf187d946c",
+		"name": "Go Nomics",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Currencies",
+			"item": [
+				{
+					"name": "Ticker (Partial Paid Plan)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/currencies/ticker?key={{key}}&ids=BTC,ETH&interval=1h,365d,ytd&per-page=100&page=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"currencies",
+								"ticker"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "ids",
+									"value": "BTC,ETH"
+								},
+								{
+									"key": "interval",
+									"value": "1h,365d,ytd"
+								},
+								{
+									"key": "per-page",
+									"value": "100"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Metadata (JSON)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/currencies?key={{key}}&ids=BTC,ETH&attributes=id,name",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"currencies"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "ids",
+									"value": "BTC,ETH"
+								},
+								{
+									"key": "attributes",
+									"value": "id,name"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Metadata (CSV)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/currencies?key={{key}}&ids=BTC,ETH&attributes=id,name&format=csv",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"currencies"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "ids",
+									"value": "BTC,ETH"
+								},
+								{
+									"key": "attributes",
+									"value": "id,name"
+								},
+								{
+									"key": "format",
+									"value": "csv"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sparkline",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/currencies/sparkline?key={{key}}&ids=BTC,ETH&start=2021-02-14T00:00:00Z&start=2021-02-16T00:00:00Z",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"currencies",
+								"sparkline"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "ids",
+									"value": "BTC,ETH"
+								},
+								{
+									"key": "start",
+									"value": "2021-02-14T00:00:00Z"
+								},
+								{
+									"key": "start",
+									"value": "2021-02-16T00:00:00Z"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Supply History (JSON) (Paid Plan)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/supplies/history?key={{key}}&currency=BTC&start=2018-04-14T00%3A00%3A00Z&end=2018-05-14T00%3A00%3A00Z",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"supplies",
+								"history"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "currency",
+									"value": "BTC"
+								},
+								{
+									"key": "start",
+									"value": "2018-04-14T00%3A00%3A00Z"
+								},
+								{
+									"key": "end",
+									"value": "2018-05-14T00%3A00%3A00Z"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Supply History (CSV) (Paid Plan)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/supplies/history?key={{key}}&currency=BTC&start=2018-04-14T00%3A00%3A00Z&end=2018-05-14T00%3A00%3A00Z&format=csv",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"supplies",
+								"history"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "currency",
+									"value": "BTC"
+								},
+								{
+									"key": "start",
+									"value": "2018-04-14T00%3A00%3A00Z"
+								},
+								{
+									"key": "end",
+									"value": "2018-05-14T00%3A00%3A00Z"
+								},
+								{
+									"key": "format",
+									"value": "csv"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Markets",
+			"item": [
+				{
+					"name": "Markets (JSON)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/markets?key={{key}}&exchange=binance&base=BNB,LTC&quote=BTC,ETH",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"markets"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "exchange",
+									"value": "binance"
+								},
+								{
+									"key": "base",
+									"value": "BNB,LTC"
+								},
+								{
+									"key": "quote",
+									"value": "BTC,ETH"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Markets (CSV)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/markets?key={{key}}&exchange=binance&base=BNB,LTC&quote=BTC,ETH&format=csv",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"markets"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "exchange",
+									"value": "binance"
+								},
+								{
+									"key": "base",
+									"value": "BNB,LTC"
+								},
+								{
+									"key": "quote",
+									"value": "BTC,ETH"
+								},
+								{
+									"key": "format",
+									"value": "csv"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Market Cap History (JSON) (Partial Paid Plan)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/market-cap/history?key={{key}}&start=2021-01-01T00%3A00%3A00Z&end=2021-02-01T00%3A00%3A00Z&convert=EUR",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"market-cap",
+								"history"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "start",
+									"value": "2021-01-01T00%3A00%3A00Z"
+								},
+								{
+									"key": "end",
+									"value": "2021-02-01T00%3A00%3A00Z"
+								},
+								{
+									"key": "convert",
+									"value": "EUR"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Market Cap History (CSV) (Partial Paid Plan)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/market-cap/history?key={{key}}&start=2021-01-01T00%3A00%3A00Z&end=2021-02-01T00%3A00%3A00Z&format=csv&convert=EUR",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"market-cap",
+								"history"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "start",
+									"value": "2021-01-01T00%3A00%3A00Z"
+								},
+								{
+									"key": "end",
+									"value": "2021-02-01T00%3A00%3A00Z"
+								},
+								{
+									"key": "format",
+									"value": "csv"
+								},
+								{
+									"key": "convert",
+									"value": "EUR"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Exchange Markets Ticker (Paid Plan)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/exchange-markets/ticker?key={{key}}&interval=1d,30d&currency=BTC,ETH&exchange=binance,gdax&convert=BTC&per-page=100&page=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"exchange-markets",
+								"ticker"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "interval",
+									"value": "1d,30d"
+								},
+								{
+									"key": "currency",
+									"value": "BTC,ETH"
+								},
+								{
+									"key": "exchange",
+									"value": "binance,gdax"
+								},
+								{
+									"key": "convert",
+									"value": "BTC"
+								},
+								{
+									"key": "per-page",
+									"value": "100"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Volume",
+			"item": [
+				{
+					"name": "History (JSON) (Partial Paid Plan)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/volume/history?key={{key}}&start=2021-01-01T00%3A00%3A00Z&end=2021-02-01T00%3A00%3A00Z&convert=EUR",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"volume",
+								"history"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "start",
+									"value": "2021-01-01T00%3A00%3A00Z"
+								},
+								{
+									"key": "end",
+									"value": "2021-02-01T00%3A00%3A00Z"
+								},
+								{
+									"key": "convert",
+									"value": "EUR"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "History (CSV) (Partial Paid Plan)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/volume/history?key={{key}}&start=2021-01-01T00%3A00%3A00Z&end=2021-02-01T00%3A00%3A00Z&convert=EUR&format=csv",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"volume",
+								"history"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "start",
+									"value": "2021-01-01T00%3A00%3A00Z"
+								},
+								{
+									"key": "end",
+									"value": "2021-02-01T00%3A00%3A00Z"
+								},
+								{
+									"key": "convert",
+									"value": "EUR"
+								},
+								{
+									"key": "format",
+									"value": "csv"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Exchange Rates",
+			"item": [
+				{
+					"name": "Exchange Rates (JSON)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/exchange-rates?key={{key}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"exchange-rates"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Exchange Rates (CSV)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/exchange-rates?key={{key}}&format=csv",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"exchange-rates"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "format",
+									"value": "csv"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "History (JSON)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/exchange-rates/history?key={{key}}&currency=BTC&start=2021-01-01T00%3A00%3A00Z&end=2021-02-01T00%3A00%3A00Z",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"exchange-rates",
+								"history"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "currency",
+									"value": "BTC"
+								},
+								{
+									"key": "start",
+									"value": "2021-01-01T00%3A00%3A00Z"
+								},
+								{
+									"key": "end",
+									"value": "2021-02-01T00%3A00%3A00Z"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "History (CSV)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/exchange-rates/history?key={{key}}&currency=BTC&start=2021-01-01T00%3A00%3A00Z&end=2021-02-01T00%3A00%3A00Z&format=csv",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"exchange-rates",
+								"history"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "currency",
+									"value": "BTC"
+								},
+								{
+									"key": "start",
+									"value": "2021-01-01T00%3A00%3A00Z"
+								},
+								{
+									"key": "end",
+									"value": "2021-02-01T00%3A00%3A00Z"
+								},
+								{
+									"key": "format",
+									"value": "csv"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Global",
+			"item": [
+				{
+					"name": "Global (Paid Plan)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/global-ticker?key={{key}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"global-ticker"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Exchanges",
+			"item": [
+				{
+					"name": "Ticker (Paid Plan)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/exchanges/ticker?key={{key}}&ids=BTC,ETH&interval=1h,365d,ytd&per-page=100&page=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"exchanges",
+								"ticker"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "ids",
+									"value": "BTC,ETH"
+								},
+								{
+									"key": "interval",
+									"value": "1h,365d,ytd"
+								},
+								{
+									"key": "per-page",
+									"value": "100"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Volume History (JSON) (Paid Plan)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/exchanges/volume/history?key={{key}}&start=2021-01-01T00%3A00%3A00Z&end=2021-02-01T00%3A00%3A00Z&convert=EUR",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"exchanges",
+								"volume",
+								"history"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "start",
+									"value": "2021-01-01T00%3A00%3A00Z"
+								},
+								{
+									"key": "end",
+									"value": "2021-02-01T00%3A00%3A00Z"
+								},
+								{
+									"key": "convert",
+									"value": "EUR"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Volume History (CSV) (Paid Plan)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/exchanges/volume/history?key={{key}}&start=2021-01-01T00%3A00%3A00Z&end=2021-02-01T00%3A00%3A00Z&convert=EUR&format=csv",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"exchanges",
+								"volume",
+								"history"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "start",
+									"value": "2021-01-01T00%3A00%3A00Z"
+								},
+								{
+									"key": "end",
+									"value": "2021-02-01T00%3A00%3A00Z"
+								},
+								{
+									"key": "convert",
+									"value": "EUR"
+								},
+								{
+									"key": "format",
+									"value": "csv"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Metadata (JSON) (Paid Plan)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/exchanges?key={{key}}&ids=binance,coinbase&attributes=id,name",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"exchanges"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "ids",
+									"value": "binance,coinbase"
+								},
+								{
+									"key": "attributes",
+									"value": "id,name"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Metadata (CSV) (Paid Plan)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/exchanges?key={{key}}&ids=binance,coinbase&attributes=id,name&format=csv",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"exchanges"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "ids",
+									"value": "binance,coinbase"
+								},
+								{
+									"key": "attributes",
+									"value": "id,name"
+								},
+								{
+									"key": "format",
+									"value": "csv"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Candles",
+			"item": [
+				{
+					"name": "Candles (JSON) (Paid Plan)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/candles?key={{key}}&interval=1d&currency=BTC&start=2021-01-01T00%3A00%3A00Z&end=2021-02-01T00%3A00%3A00Z",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"candles"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "interval",
+									"value": "1d"
+								},
+								{
+									"key": "currency",
+									"value": "BTC"
+								},
+								{
+									"key": "start",
+									"value": "2021-01-01T00%3A00%3A00Z"
+								},
+								{
+									"key": "end",
+									"value": "2021-02-01T00%3A00%3A00Z"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Candles (CSV) (Paid Plan)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/candles?key={{key}}&interval=1d&currency=BTC&start=2021-01-01T00%3A00%3A00Z&end=2021-02-01T00%3A00%3A00Z&format=csv",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"candles"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "interval",
+									"value": "1d"
+								},
+								{
+									"key": "currency",
+									"value": "BTC"
+								},
+								{
+									"key": "start",
+									"value": "2021-01-01T00%3A00%3A00Z"
+								},
+								{
+									"key": "end",
+									"value": "2021-02-01T00%3A00%3A00Z"
+								},
+								{
+									"key": "format",
+									"value": "csv"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Exchange Candles (JSON) (Paid Plan)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/exchange_candles?key={{key}}&interval=1d&exchange=binance&market=BTCUSDT&start=2021-01-01T00%3A00%3A00Z&end=2021-02-01T00%3A00%3A00Z",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"exchange_candles"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "interval",
+									"value": "1d"
+								},
+								{
+									"key": "exchange",
+									"value": "binance"
+								},
+								{
+									"key": "market",
+									"value": "BTCUSDT"
+								},
+								{
+									"key": "start",
+									"value": "2021-01-01T00%3A00%3A00Z"
+								},
+								{
+									"key": "end",
+									"value": "2021-02-01T00%3A00%3A00Z"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Exchange Candles (CSV) (Paid Plan)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/exchange_candles?key={{key}}&interval=1d&exchange=binance&market=BTCUSDT&start=2021-01-01T00%3A00%3A00Z&end=2021-02-01T00%3A00%3A00Z&format=csv",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"exchange_candles"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "interval",
+									"value": "1d"
+								},
+								{
+									"key": "exchange",
+									"value": "binance"
+								},
+								{
+									"key": "market",
+									"value": "BTCUSDT"
+								},
+								{
+									"key": "start",
+									"value": "2021-01-01T00%3A00%3A00Z"
+								},
+								{
+									"key": "end",
+									"value": "2021-02-01T00%3A00%3A00Z"
+								},
+								{
+									"key": "format",
+									"value": "csv"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Markets Candles (JSON) (Paid Plan)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/markets/candles?key={{key}}&interval=1d&base=ETH&quote=BTC&start=2021-01-01T00%3A00%3A00Z&end=2021-02-01T00%3A00%3A00Z",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"markets",
+								"candles"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "interval",
+									"value": "1d"
+								},
+								{
+									"key": "base",
+									"value": "ETH"
+								},
+								{
+									"key": "quote",
+									"value": "BTC"
+								},
+								{
+									"key": "start",
+									"value": "2021-01-01T00%3A00%3A00Z"
+								},
+								{
+									"key": "end",
+									"value": "2021-02-01T00%3A00%3A00Z"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Markets Candles (CSV) (Paid Plan)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/markets/candles?key={{key}}&interval=1d&base=ETH&quote=BTC&start=2021-01-01T00%3A00%3A00Z&end=2021-02-01T00%3A00%3A00Z&format=csv",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"markets",
+								"candles"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "interval",
+									"value": "1d"
+								},
+								{
+									"key": "base",
+									"value": "ETH"
+								},
+								{
+									"key": "quote",
+									"value": "BTC"
+								},
+								{
+									"key": "start",
+									"value": "2021-01-01T00%3A00%3A00Z"
+								},
+								{
+									"key": "end",
+									"value": "2021-02-01T00%3A00%3A00Z"
+								},
+								{
+									"key": "format",
+									"value": "csv"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trades",
+			"item": [
+				{
+					"name": "Trades (JSON) (Paid Plan)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/trades?key={{key}}&exchange=binance&market=BTCUSDT&limit=100&order=asc&from=2021-01-01T00%3A00%3A00Z",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"trades"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "exchange",
+									"value": "binance"
+								},
+								{
+									"key": "market",
+									"value": "BTCUSDT"
+								},
+								{
+									"key": "limit",
+									"value": "100"
+								},
+								{
+									"key": "order",
+									"value": "asc"
+								},
+								{
+									"key": "from",
+									"value": "2021-01-01T00%3A00%3A00Z"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Trades (CSV) (Paid Plan)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/trades?key={{key}}&exchange=binance&market=BTCUSDT&limit=100&order=asc&from=2021-01-01T00%3A00%3A00Z&format=csv",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"trades"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "exchange",
+									"value": "binance"
+								},
+								{
+									"key": "market",
+									"value": "BTCUSDT"
+								},
+								{
+									"key": "limit",
+									"value": "100"
+								},
+								{
+									"key": "order",
+									"value": "asc"
+								},
+								{
+									"key": "from",
+									"value": "2021-01-01T00%3A00%3A00Z"
+								},
+								{
+									"key": "format",
+									"value": "csv"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "Orders (JSON) (Paid Plan)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/orders/snapshot?key={{key}}&exchange=binance&market=BTCUSDT&at=2021-01-01T12%3A00%3A00Z",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"orders",
+								"snapshot"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "exchange",
+									"value": "binance"
+								},
+								{
+									"key": "market",
+									"value": "BTCUSDT"
+								},
+								{
+									"key": "at",
+									"value": "2021-01-01T12%3A00%3A00Z"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Orders (CSV) (Paid Plan)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/orders/snapshot?key={{key}}&exchange=binance&market=BTCUSDT&at=2021-01-01T12%3A00%3A00Z&format=csv",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"orders",
+								"snapshot"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "exchange",
+									"value": "binance"
+								},
+								{
+									"key": "market",
+									"value": "BTCUSDT"
+								},
+								{
+									"key": "at",
+									"value": "2021-01-01T12%3A00%3A00Z"
+								},
+								{
+									"key": "format",
+									"value": "csv"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Predictions",
+			"item": [
+				{
+					"name": "Currencies Prediction Ticker (Paid Plan)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/currencies/predictions/ticker?key={{key}}&ids=BTC,ETH",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"currencies",
+								"predictions",
+								"ticker"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "ids",
+									"value": "BTC,ETH"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Currencies Prediction History (Paid Plan)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/currencies/predictions/history?key={{key}}&id=BTC&interval=7d",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"currencies",
+								"predictions",
+								"history"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "id",
+									"value": "BTC"
+								},
+								{
+									"key": "interval",
+									"value": "7d"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
