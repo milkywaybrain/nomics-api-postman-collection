@@ -5,7 +5,7 @@ The unofficial Postman collection for Nomics API.
 Nomics Website : https://nomics.com/  
 Nomics API Doc : https://nomics.com/docs
 
-Nomics provides professional-grade market data APIs to institutional crypto investors and exchanges. To our luck, some of this awesome sleek APIs can be accessed freely through their free plan as well. So here is Postman collection for you to further enrich the whole experience.
+Nomics provides professional-grade market data APIs to institutional crypto investors and exchanges. To our luck, some of this awesome sleek APIs can be accessed freely through their free plan as well. So here is a Postman collection for you to further enrich the whole experience.
 
 **Note:** This is an unofficial effort, so some new API's included / changed ones in nomics may not reflect here in this collection immediately, so be always check the official doc once, before checking in this collection into your postman.
 
